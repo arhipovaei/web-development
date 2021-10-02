@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>survey</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    
+    <body>
+        <h1>Good vibes form</h1>
+        <p>Пожалуйста, заполните анкету.</p>
+
+        <div class="container">
+            <form>
+
+                <label for="name">ФИО</label>
+                <input type="text" name="firstname" placeholder="Щиголев Владимир Викторович"><br>
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="example@example.com"><br>
+
+                <label for="age">Возраст</label>
+                <input type="number" min="1" placeholder="Ваш возраст"><br>
+
+                <label for="gender">Ваш пол:</label>
+                <select id="gender" name="gender">
+                    <option disabled selected value></option>
+                    <option value="female">Женский</option>
+                    <option value="male">Мужской</option>
+                    <option value="other">Другой</option>
+                </select><br><br>
+
+                <label for="text">Я сегодня:</label><br>
+                <input name="type" value="1" type="radio">Молодец<br>
+                <input name="type" value="2" type="radio">Умница<br>
+                <input name="type" value="3" type="radio">Молодец и умница<br><br>
+
+                <label for="text">На день рождения друзья мне подарили:</label><br>
+                <input name="type" value="general" type="checkbox">Деньги<br>
+                <input name="type" value="general" type="checkbox">Пиццу<br>
+                <input name="type" value="general" type="checkbox">Тарелку<br><br>
+
+                <label for="subject">Напиши сюда анекдот:</label><br>
+                <textarea id="subject" name="subject" placeholder="Введите текст..." style="height:200px"></textarea><br>
+
+                <a href="https://klike.net/uploads/posts/2020-11/1604650141_2.jpg" class="button">Отправить</a>
+            </form>
+        </div>
+    </body>
+</html>
