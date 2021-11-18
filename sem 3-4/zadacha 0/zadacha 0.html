@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Форма опроса</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="mx-5 my-1">
+            <div class="row ">
+                <div class="col-sm-3"></div>
+                <nav class="border col-sm-6 bg-light bg-gradient" style="border-radius: 5%">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ледниковый период </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ледниковый период 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ледниковый период 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ледниковый период 4</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-1 bg-light bg-gradient"></div>
+                <div class="col-sm-4 p-3 bg-light bg-gradient">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="Слайд 4" aria-current="true" aria-label="Слайд 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" class="Слайд 5" aria-current="true" aria-label="Слайд 1"></button>
+                        </div>
+                        <div class="carousel-inner slide" style=" width:100%; height: 200px !important;">
+                            <div class="carousel-item active">
+                                <img src="1.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="2.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="3.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="4.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="5.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Предыдущий</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Следующий</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-1 bg-light bg-gradient"></div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-sm-3"></div>
+                <form class="col-sm-6 center-block bg-light bg-gradient">
+                    <div class="form-group row col-sm-12">
+                        <h1 class="text-center">Как хорошо вы знаете "Ледниковый период"?</h1>
+                        <p class="text-center lead">А также "Ледниковый период 2: Глобальное потепление", "Ледниковый период 3: Эра динозавров", "Ледниковый период 4: Континентальный дрейф", "Ледниковый период: Столкновение неизбежно".</p>
+                    </div>
+                    <div class="form-group row my-2">
+                        <label for="name" class="col-sm-4 col-form-label">Имя:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="name" placeholder="Введите Ваше имя">
+                        </div>
+                    </div>
+                    <div class="form-group row my-2">
+                        <label for="email" class="col-sm-4 col-form-label">E-mail:</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email" placeholder="Введите Ваш email">
+                        </div>
+                    </div>
+                    <div class="form-group row mt-1">
+                        <label class="col-sm-4 col-form-label">Сколько яиц динозавра украл Сид в третьей части мультфильма?</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" min=0 max=4>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="daytime" class="col-sm-4 col-form-label">Как зовут главново героя мультфильма?</label>
+                        <div class="col-sm-8">
+                            <select class="form-select">
+                                <option value="1">Гэрри</option>
+                                <option value="2">Мэни</option>
+                                <option value="3">Джони</option>
+                                <option value="4">Бил</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <fieldset class="form-group mb-3"> 
+                        <div class="row">
+                            <legend class="col-form-label col-sm-4 pt-0">Какой родственник Сида приезжает и остается с ним в четвертой части мультфильма?</legend>
+                            <div class="col-sm-8">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio" id="radio1" value="option1" checked>
+                                    <label class="form-check-label" for="radio">мама</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio" id="radio2" value="option2">
+                                    <label class="form-check-label" for="radio2">тетя</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio" id="radio3" value="option3">
+                                    <label class="form-check-label" for="radio3">бабуля</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio" id="radio4" value="option4">
+                                    <label class="form-check-label" for="radio4">никто</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group row">
+                        <div class="col-sm-4">Как зовут опоссумов из второй части мультфильма?</div>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox1">
+                                <label class="form-check-label" for="checkbox1">Крэш</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox2">
+                                <label class="form-check-label" for="checkbox2">Энди</label></div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox3">
+                                <label class="form-check-label" for="checkbox3">Эдди</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox4">
+                                <label class="form-check-label" for="checkbox4">Альфонсо</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="form-group mt-3">
+                                <label for="Textarea"><b>Кто Ваш любимый персонаж и почему:</b></label>
+                                <textarea class="form-control mt-2" id="Textarea" rows="3" placeholder="Мне очень нравится..." style="resize: none;"></textarea>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="form-group row">
+                        <div class="col-sm-12 mt-2 text-center">
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>      
+   </body>
+</html>
