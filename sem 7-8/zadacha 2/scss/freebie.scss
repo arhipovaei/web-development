@@ -1,0 +1,623 @@
+$pose: absolute;
+$O: "Oswald";
+$S: "Open Sans";
+
+@mixin pad($pl, $pt, $pb){
+    padding-top: $pt;
+    padding-left: $pl;
+    padding-bottom: $pb;
+}
+@mixin whlt($ww, $hh, $tt, $ll){
+    top: $tt;
+    left: $ll;
+    width: $ww;
+    height: $hh;
+}
+@mixin wh($w, $h){
+    width: $ww;
+    height: $hh;
+}
+@mixin fonts ($fst, $fs, $fw, $c, $ff) {
+    font-style: $fst;
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+    font-family: $ff;
+}
+@mixin margins ($ml, $mr, $mt){
+    margin-left: $ml;
+    margin-right: $mr;
+    margin-top: $mt;
+}
+@mixin tlr ($t, $l, $r){
+    top: $t;
+    left: $l;
+    right: $r;
+}
+@mixin flexes ($d, $f){
+    display: $d;
+    flex-wrap: $f;
+}
+@mixin flexes2 ($di,$ai) {
+    display: $di;
+    align-items: $ai;
+}
+@mixin flexes3 ($dis, $dir){
+    display: $dis;
+    flex-direction: $dir;
+}
+@mixin wh ($w, $h) {
+    width: $w;
+    height: $h;
+}
+@mixin back($bc, $bp, $zi, $mw, $mh){
+    background-color: $bc;
+    background-position: $bp;
+    z-index: $zi;
+    min-width: $mw;
+    min-height: $mh;
+}
+@keyframes in {
+    0% {
+    width: 0;
+    left: 0;
+    right: auto;
+    }
+    100% {
+    left: 0;
+    right: auto;
+    width: 100%;
+    }
+}
+@keyframes out {
+    0% {
+    width: 100%;
+    left: auto;
+    right: 0;
+    }
+    100% {
+    width: 0;
+    left: auto;
+    right: 0;
+    }
+}
+@keyframes show {
+    0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body {
+    @include fonts(normal, 16px, normal, #252525, $O);
+    line-height: 1.2;
+}
+.wrapper{
+    @include margins(312px, 312px, 0);
+}
+.header{
+    width: 100%;
+}
+.header__wrapper{ 
+    @include flexes(flex, wrap);
+    align-items: flex-end;
+    justify-content: right;
+    padding-top: 79px;
+}
+.header__list{
+    @include flexes(flex, wrap);
+}
+.header__item{
+   @include margins(0, 58.4px, 0)
+}
+.header__item:last-child{
+    margin-right: 0px;
+}
+.header__link{ 
+    color: white;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1.94px;
+    text-decoration: none;
+}
+.header__longline{
+    @include whlt(54.91px, 2px, 19px,0px);
+    background: #4CAF50;
+}
+.header__shortline{
+    @include whlt(17.97px, 2px,19px, 26.96px);
+    background: #4CAF50;
+}
+.picture{
+    background: url(../img/black.png) no-repeat;
+    position: $pose;
+    @include whlt(1800px, 904px,48px, 50px);
+}
+.header__bigtext{
+    position: $pose;
+    letter-spacing: 4.608px;
+    text-align: center;
+    @include whlt(1171.05px, 98px,383px, 310.48px,);
+    @include fonts(normal, 72px, 500, #FFFFFF, $O);
+}
+.header__smalltext{ 
+    position: $pose;
+    opacity: 0.8;
+    text-align: center;
+    letter-spacing: 1.28px;
+    @include whlt(1171.05px, 27px, 505.5px, 316.04px);
+    @include fonts(normal, 20px, normal, #FFFFFF, $S);
+}
+.header__bottom{ 
+    position: $pose;
+    letter-spacing: 2.304px;
+    @include whlt(42.93px, 49px,836px, 845px);
+    @include fonts(normal, 36px, bold, #FFFFFF, $O);
+}
+.digits {
+    display: flex;
+    flex: 0 0 auto;
+    height: 49px;
+    align-self: center;
+    &:not(:last-child){
+        padding-right: 9px;
+    }
+}
+.one_digit{
+    font-family: $O;
+    line-height: 27px; 
+    letter-spacing: 1.15px;
+    @include fonts(normal, 16px, 700, #777, 'Oswald');
+    &:hover{ 
+        font-size: 36px;
+        color: white;
+        cursor: pointer;
+        line-height: 10px;
+        letter-spacing: 2.3px;
+        text-decoration: line-through;
+        text-decoration-style: solid;
+        text-decoration-color: #4CAF50;
+        transition: all 0.3s ease;
+    }
+}
+.first__line{
+    @include margins(190px, 0, 1000px)
+}
+.line__text{
+    position: $pose;
+    background: #353535;
+    @include whlt(20px, 2px,14px, 0px);
+}
+.screen_sqwd { 
+    background: white;
+    @include flexes3(flex, column);
+    flex: 1900px;
+    max-width: 1900px;
+    max-height: 825px;
+    padding: 149px 353px 117px 105px;
+}
+.guy { 
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    min-width: 590px;
+    min-height: 391px;
+    background: url(../img/guy.png) no-repeat;
+    background-color: white;
+    background-position: right;
+    z-index: 2;
+}
+.standing { 
+    position: relative;
+    top: -215px;
+    left: 300px;
+    @include flexes3(flex, column);
+    align-self: center;
+    @include back(white, left, 0, 506px, 391px);
+    background: url(../img/standing.png) no-repeat;
+}
+
+.text_we-are { 
+    display: inline;
+    @include fonts(normal, 36px, 700, #333, $O);
+    line-height: 53px;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+    @include pad(80px, 82px, 0);
+}
+
+.text_the-sqwd { 
+    display: inline;
+    @include fonts(normal, 42px, 300, #504E4E, $S);
+    line-height: 57px;
+    letter-spacing: 2.69px;
+    @include pad(83px, 4px, 32px);
+}
+
+.text_quote { 
+    display: inline;
+    min-width: 281px;
+    @include fonts(normal, 15px, 300, #5B5858, $S);
+    line-height: 25px;
+    letter-spacing: 1.26px;
+}
+
+.text_quote-for-guy { 
+    margin-left: 140px;
+}
+
+.text_quote-for-standing { 
+    @include margins(188px, 0, 236px);
+}
+
+.block_green-translucent {
+    @include wh(309px, 418px);
+    @include margins(222px, 0, 71px);
+    position: $pose;
+    align-self: center;
+    background: #4CAF50;
+    opacity: 0.8;
+    z-index: 1;
+}
+.our__services{
+    position: $pose;
+    @include wh(281px, 71px);
+    top: -6px;
+    @include fonts(normal, 48px, bold, #252525, $O);
+    @include margins(365px,0,1906px);
+    letter-spacing: 3.072px;
+}
+.little__line{
+    position: $pose;
+    @include whlt(45px, 2px, 72px,0px);
+    background: #252525;
+}
+.three__blocks{
+    position: $pose;
+    @include wh(373px, 260px);
+    @include margins(365px, 0, 250px);
+    background: #FFFFFF;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 3px; /* Высота зачеркивающей линии */
+        background:#70BF73; /* Цвет зачеркивающей линии */
+        top: 100%;
+        animation: out 0s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    }
+}
+div.crossed3:hover .three__blocks:before {
+    animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+.header__threeblocks{
+    position: $pose;
+    @include whlt(85px, 30px, -3px, 0px);
+    @include fonts(normal, 20px, 300, #252525, $O);
+    @include margins (44px, 0, 50px);
+    letter-spacing: 1.28px;
+}
+.header__threeblocks__line{
+    position: $pose;
+    @include whlt(25px, 2px, 42px,0px);
+    background: #252525;
+}
+.text__threeblocks{
+    position: $pose;
+    @include whlt(281px, 75px,116px, 43px);
+    @include fonts(normal, 12px, normal, #777777, $S);
+    line-height: 25px;
+    @include flexes2(flex, center);
+    letter-spacing: 1.008px;
+}
+.read__more{
+    position: $pose;
+    @include whlt(80px, 15px,210px, 44px);
+    @include fonts(normal, 10px, 300, #252525, $O);
+    line-height: 15px;
+    letter-spacing: 0.64px;
+}
+.round__picture{
+    position: $pose;
+    @include whlt(50px, 50px,48px, 275px,);
+    box-shadow: 0px 0px 20px #DBDBDB;
+    border-radius: 100%;
+}
+.third__line__list{
+    @include flexes(flex, wrap);
+}
+.third__line__item{
+    margin-right: 58.4px;
+    &:last-child{
+        margin-right: 0px;
+    }
+}
+.third__line__link{
+    cursor: pointer;
+    @include wh(1000px, 30px);
+    @include fonts(normal, 12px, 400, #252525, $S);
+    line-height: 18px;
+    letter-spacing: 0.832px;
+    text-decoration: none;
+    transition: font-weight 10sms ease-in-out;
+    &:hover{
+        font-weight: 900;
+    }
+}
+.image__right{
+    position: $pose;
+    @include whlt(727px, 482px, -18px, -140px);
+    mix-blend-mode: normal;
+    margin-left: 1250px;
+}
+.image__right__mask{
+    position: $pose;
+    @include whlt(455px, 444px, 0px, 0px);
+    background: #F3F4F6;
+    z-index: -1;
+}
+.big__text__right{
+    position: $pose;
+    @include whlt(450px, 142px, 262px, 0px);
+    @include fonts(normal, 48px, 300, #252525, $O);
+    line-height: 71px;
+    letter-spacing: 3.072px;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 3px; /* Высота зачеркивающей линии */
+        background:#70BF73;; /* Цвет зачеркивающей линии */
+        top: 75%;
+        animation: out 0s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    }
+}
+div.crossed:hover .big__text__right:before {
+    animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+.little__header__right{
+    position: $pose;
+    @include whlt(116px, 25px, 468px, 343px);
+    @include fonts(normal, 18px, 300, #252525, $S);
+    line-height: 25px;
+    letter-spacing: 1.152px;
+    margin-left: -125px;
+}
+.little__text__right{
+    position: $pose;
+    @include whlt(336px, 46px, 510px, 123px);
+    @include fonts(normal, 13px, 300, #C2C2C2, $S);
+    line-height: 23px;
+    letter-spacing: 0.832px;
+    text-align: right;
+    margin-left: -118px;
+}
+.image__left{
+    position: $pose;
+    @include whlt(679px, 453px, -3px, -124px);
+    mix-blend-mode: normal;
+    margin-left: 490px;
+}
+.image__left__mask{
+    position: $pose;
+    @include whlt(455px, 444px, 0px, 0px);
+    background: #F3F4F6;
+    z-index: -1;
+}
+.big__text__left{
+    position: $pose;
+    @include whlt(250px, 142px, 268px, 370px);
+    @include fonts(normal, 48px, 300, #252525, $O);
+    line-height: 71px;
+    letter-spacing: 3.072px;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 3px; /* Высота зачеркивающей линии */
+        background:#70BF73; /* Цвет зачеркивающей линии */
+        top: 23%;
+        animation: out 0s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    }
+}
+div.crossed1:hover .big__text__left:before {
+    animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+.little__header__left{
+    position: $pose;
+    @include whlt(116px, 25px, 467px, 174px);
+    @include fonts(normal, 18px, 300, #252525, $S);
+    line-height: 25px;
+    letter-spacing: 1.152px;
+}
+.little__text__left{
+    position: $pose;
+    @include whlt(336px, 46px, 512px, 174px);
+    @include fonts(normal, 13px, 300, #C2C2C2, $S);
+    line-height: 23px;
+    align-items: left;
+    letter-spacing: 0.832px;
+}
+.read__more__left{
+    position: $pose;
+    @include whlt(81px, 18px, 578px, 174px);
+    @include fonts(normal, 13px, normal, 0, $S);
+    line-height: 18px;
+    letter-spacing: 0.832px;
+}
+.little__view__more{
+    position: $pose;
+    @include whlt(100px, 19px, 920px, 325px);
+    @include fonts(normal, 13px, notmal, #252525, $O);
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.crew__image{
+    position: $pose;
+    @include whlt(617px, 411px, 4730px, 365px);
+    mix-blend-mode: normal;
+}
+.crew__mask__mini{
+    position: $pose;
+    @include whlt(370px, 55px, 5073px, 365px);
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+.crew__mask__mini__text{
+    position: $pose;
+    @include whlt(150px, 27px, 13px,144px);
+    @include fonts(normal, 18px, 300, #252525, $O);
+    line-height: 27px;
+    @include flexes2(flex, flex-end);
+    letter-spacing: 1.152px;
+}
+.crew__mask__max{
+    position: $pose;
+    @include whlt(370px, 155.24px, 4975px, 365px);
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.92;
+}
+.crew__mask__max__header{
+    position: $pose;
+    @include whlt(119px, 25px, 20.1px, 126px);
+    @include fonts(normal, 18px, 300, #252525, $O);
+    line-height: 27px;
+    @include flexes2(flex, flex-end);
+    letter-spacing: 1.152px;
+}
+.crew__line{
+    position: $pose;
+    @include whlt(45px, 2px, 54px, 163px);
+    background: #252525;
+}
+.crew__creative__director{
+    position: $pose;
+    @include whlt(200px, 27px, 62px, 125px);
+    @include fonts(normal, 18px, 300, #252525, $O);
+    line-height: 27px;
+    @include flexes2(flex, flex-end);
+    letter-spacing: 1.152px;
+}
+.crew__text{
+    position: $pose;
+    @include whlt(500px, 25px, 100px, 90px);
+    @include fonts(normal, 12px, normal, #777777, $S);
+    line-height: 25px;
+    @include flexes2(flex, center);
+    text-align: center;
+    letter-spacing: 1.008px;
+}
+.footer__text{
+    position: $pose;
+    @include whlt(735px, 93px, 5350px, 582px);
+    @include fonts(normal, 14px, 300, #373737, $S);
+    line-height: 31px;
+    letter-spacing: 0.896px;
+    text-align: center;
+    opacity: 0.7;
+}
+.little__quotes{
+    position: $pose;
+    @include whlt(20px, 20px, 5500px, 939px);
+    mix-blend-mode: normal;
+}
+.david__james{
+    position: $pose;
+    @include whlt(300px, 27px, 5565px, 840.5px);
+    @include fonts(normal, 18px, normal, #373737, $O);
+    line-height: 27px;
+    letter-spacing: 1.152px;
+}
+.little__star{
+    position: $pose;
+    @include whlt(15px, 15px, 5620px, 870px);
+}
+.line{
+    position: $pose;
+    @include whlt(511px, 1px, 5690px, 683px);
+    background: #D8D8D8;
+    mix-blend-mode: normal;
+}
+.container__footer{
+    position: $pose;
+    @include whlt(880px, 300px, 5805px, 49px);
+}
+.container__footer__image{
+    position: $pose;
+    @include whlt(35px, 25px, 90px, 434px);
+}
+.container__footer__header{
+    position: $pose;
+    @include whlt(400px, 35px, 150px, 320px);
+    @include fonts(normal, 24px, normal, #373737, $O);
+    line-height: 36px;
+    @include flexes2(flex, flex-end);
+    text-align: center;
+    letter-spacing: 2.66667px;
+}
+.container__footer__text{
+    position: $pose;
+    @include whlt(500px, 19px, 210px, 312px);
+    @include fonts(normal, 14px, 300, #373737, $S);
+    line-height: 19px;
+    @include flexes2(flex, flex-end);
+    text-align: center;
+    letter-spacing: 1.55556px;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+.container__footer__arrow{
+    position: $pose;
+    @include whlt(15px, 15px, 250px, 447px);
+    mix-blend-mode: normal;
+}
+.black__block{
+    position: $pose;
+    @include whlt(1779px, 339px, 6105px, 50px);
+    background: #2E2E2E;
+}
+.black__block__text{
+    position: $pose;
+    @include whlt(259px, 17px, 142px, 772px);
+    @include fonts(normal, 13px, 300, #FFFFFF, $O);
+    line-height: 19px;
+    @include flexes2(flex, flex-end);
+    letter-spacing: 0.832px;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+.black__block__image{
+    position: $pose;
+    @include whlt(32px, 32px, 225px, 832px);
+    mix-blend-mode: normal;
+}
+.very__black__block{
+    position: $pose;
+    @include whlt(1779px, 58px, 6443px, 50px);
+    background: #252525;
+}
+.very__black__block__text{
+    position: $pose;
+    @include whlt(286px, 17px, 21px, 758px);
+    @include fonts(normal, 13px, 300, #FFFFFF, $O);
+    line-height: 19px;
+    @include flexes2(flex, flex-end);
+    letter-spacing: 0.832px;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
